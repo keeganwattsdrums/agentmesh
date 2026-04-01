@@ -1,0 +1,40 @@
+{
+  "paypal_link": "https://paypal.me/keeganwattsmusic",
+  "pricing": {
+    "psychological": {
+      "starter": 0,
+      "pro": 47,
+      "business": 97,
+      "enterprise": 297
+    },
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": 0,
+        "features": ["1,000 API calls/month", "7-day memory retention", "Basic semantic search", "Community support"]
+      },
+      {
+        "name": "Pro",
+        "price": 47,
+        "popular": true,
+        "features": ["Unlimited API calls", "Unlimited memory retention", "Advanced semantic search", "Context optimization", "Priority support", "Roadmap input"]
+      },
+      {
+        "name": "Business",
+        "price": 97,
+        "features": ["Everything in Pro", "Team collaboration", "Audit trails", "SLA guarantee", "Dedicated support"]
+      }
+    ]
+  },
+  "conversion_strategy": {
+    "freemium_hook": "Start free, upgrade when you hit limits",
+    "founding_customer_benefits": [
+      "Price locked forever",
+      "Direct founder access",
+      "Shape product roadmap",
+      "Founding customer badge",
+      "Lifetime 50% discount"
+    ],
+    "urgency": "Only 3 founding spots remaining"
+  }
+}

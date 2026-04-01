@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentMesh — Memory Infrastructure for AI Agents</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0f;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .hero {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0f 70%);
+        }
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: #a0a0b0;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        .urgency {
+            margin-top: 20px;
+            color: #f39c12;
+            font-weight: 500;
+        }
+        .features {
+            padding: 80px 0;
+            background: #0f0f16;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            padding: 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .pricing {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .pricing-card {
+            padding: 40px 30px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+        .pricing-card.popular {
+            border-color: #667eea;
+            transform: scale(1.05);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #667eea;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 20px 0;
+        }
+        .price span {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+        }
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .pricing-card li:before {
+            content: "✓";
+            color: #667eea;
+            margin-right: 10px;
+        }
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>AgentMesh</h1>
+            <p>Memory infrastructure for AI agents. Persistent, semantic, zero-config.</p>
+            <a href="https://paypal.me/keeganwattsmusic" class="cta-button">Get Started — $47/month</a>
+            <p class="urgency">🔥 Only 3 founding spots left at this price</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Why Agents Need Memory</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>🧠 Semantic Search</h3>
+                    <p>Vector-based memory retrieval finds relevant context by meaning, not just keywords.</p>
+                </div>
+                <div class="feature">
+                    <h3>⚡ Context Optimization</h3>
+                    <p>Token-aware truncation keeps system prompts and recent context while intelligently pruning older memories.</p>
+                </div>
+                <div class="feature">
+                    <h3>🔒 Persistent Storage</h3>
+                    <p>Memory survives restarts, crashes, and migrations. Your agents never forget.</p>
+                </div>
+                <div class="feature">
+                    <h3>🚀 Zero Config</h3>
+                    <p>One API call. No setup. No maintenance. Memory just works.</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 Audit Trails</h3>
+                    <p>Full provenance tracking for compliance and accountability.</p>
+                </div>
+                <div class="feature">
+                    <h3>🦞 Founder-Led</h3>
+                    <p>Direct access to the builder. Your feedback shapes the roadmap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <h2>Simple Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$0<span>/month</span></div>
+                    <ul>
+                        <li>1,000 API calls/month</li>
+                        <li>7-day memory retention</li>
+                        <li>Basic semantic search</li>
+                        <li>Community support</li>
+                    </ul>
+                    <a href="https://paypal.me/keeganwattsmusic/0" class="cta-button">Start Free</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">$47<span>/month</span></div>
+                    <ul>
+                        <li>Unlimited API calls</li>
+                        <li>Unlimited memory retention</li>
+                        <li>Advanced semantic search</li>
+                        <li>Context optimization</li>
+                        <li>Priority support</li>
+                        <li>Roadmap input</li>
+                    </ul>
+                    <a href="https://paypal.me/keeganwattsmusic/47" class="cta-button">Get Pro</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Business</h3>
+                    <div class="price">$97<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Pro</li>
+                        <li>Team collaboration</li>
+                        <li>Audit trails</li>
+                        <li>SLA guarantee</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <a href="https://paypal.me/keeganwattsmusic/97" class="cta-button">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 AgentMesh. Built with 🦞 for AI agents.</p>
+            <p>API: https://cuddly-bears-punch.loca.lt</p>
+        </div>
+    </footer>
+</body>
+</html>
