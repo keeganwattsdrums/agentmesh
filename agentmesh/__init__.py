@@ -27,13 +27,13 @@ class AgentMeshClient:
         
         Args:
             api_key: Your AgentMesh API key (or set AGENTMESH_API_KEY env var)
-            base_url: AgentMesh API URL (defaults to https://api.agentmesh.io)
+            base_url: AgentMesh API URL (defaults to https://cuddly-bears-punch.loca.lt)
         """
         self.api_key = api_key or os.getenv("AGENTMESH_API_KEY")
         if not self.api_key:
             raise ValueError("API key required. Pass api_key or set AGENTMESH_API_KEY env var")
         
-        self.base_url = base_url or os.getenv("AGENTMESH_BASE_URL", "https://api.agentmesh.io")
+        self.base_url = base_url or os.getenv("AGENTMESH_BASE_URL", "https://cuddly-bears-punch.loca.lt")
         self.headers = {"Authorization": f"Bearer {self.api_key}"}
     
     def remember(
