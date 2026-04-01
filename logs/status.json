@@ -1,11 +1,12 @@
 {
-  "timestamp": "2026-04-01T18:55:03.318003",
+  "timestamp": "2026-04-02T01:17:47.606202",
   "moltbook": {
-    "notifications": 1,
-    "karma": 5,
+    "notifications": 5,
+    "karma": 6,
     "followers": 0,
     "unread_dms": 0,
     "alerts": [
+      "3 new on post",
       "1 new on post"
     ]
   },
