@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-AgentMesh Aggressive Engagement Heartbeat
-Runs every 5 minutes to check Moltbook and ENGAGE
+AgentMesh Autonomous Heartbeat
+Runs every 5 minutes via cron
+Logs status and creates summary for easy reporting
 """
 
 import requests
@@ -19,8 +20,12 @@ def log(message):
     with open("logs/heartbeat.log", "a") as f:
         f.write(log_line + "\n")
 
+def save_status(status_data):
+    """Save current status to JSON for easy reading"""
+    with open("logs/status.json", "w") as f:
+        json.dump(status_data, f, indent=2)
+
 def check_moltbook():
-    """Check Moltbook for notifications and activity"""
     headers = {"Authorization": f"Bearer {MOLTBOOK_KEY}"}
     try:
         r = requests.get("https://www.moltbook.com/api/v1/home", headers=headers, timeout=10)
@@ -29,67 +34,77 @@ def check_moltbook():
         account = data.get("your_account", {})
         notifs = account.get("unread_notification_count", 0)
         karma = account.get("karma", 0)
+        followers = account.get("followerCount", 0)
         
-        log(f"Moltbook: {notifs} notifications, karma: {karma}")
+        log(f"Moltbook: {notifs} notifications, karma: {karma}, followers: {followers}")
         
-        # Check post activity
+        # Check for actionable items
+        alerts = []
         post_activity = data.get("activity_on_your_posts", [])
         for activity in post_activity:
-            post_id = activity.get("post_id", "")
             new_count = activity.get("new_notification_count", 0)
             if new_count > 0:
-                log(f"ALERT: Post {post_id[-8:]} has {new_count} new interactions - NEEDS RESPONSE")
+                alerts.append(f"{new_count} new on post")
+                log(f"ALERT: {new_count} new interactions")
         
-        return notifs, karma, post_activity
+        # Check DMs
+        dms = data.get("your_direct_messages", {})
+        unread_dms = dms.get("unread_message_count", 0) if isinstance(dms.get("unread_message_count"), int) else 0
+        if unread_dms > 0:
+            alerts.append(f"{unread_dms} unread DMs")
+        
+        return {
+            "notifications": notifs,
+            "karma": karma,
+            "followers": followers,
+            "unread_dms": unread_dms,
+            "alerts": alerts
+        }
         
     except Exception as e:
         log(f"Moltbook error: {e}")
-        return 0, 0, []
+        return {"notifications": 0, "karma": 0, "followers": 0, "unread_dms": 0, "alerts": [], "error": str(e)}
 
 def check_api_health():
-    """Check if API is responding"""
     try:
         r = requests.get(f"{API_URL}/health", timeout=10)
         if r.status_code == 200:
             data = r.json()
             agents = data.get("agents", 0)
-            log(f"API: healthy, {agents} agents registered")
-            return True, agents
+            log(f"API: healthy, {agents} agents")
+            return {"status": "healthy", "agents": agents}
         else:
-            log(f"API: unhealthy (status {r.status_code})")
-            return False, 0
+            log(f"API: unhealthy ({r.status_code})")
+            return {"status": f"error_{r.status_code}", "agents": 0}
     except Exception as e:
         log(f"API error: {e}")
-        return False, 0
+        return {"status": "down", "agents": 0, "error": str(e)}
 
-def browse_and_engage():
-    """Browse feed and find engagement opportunities"""
+def browse_opportunities():
     headers = {"Authorization": f"Bearer {MOLTBOOK_KEY}"}
     try:
-        # Get hot posts
         r = requests.get("https://www.moltbook.com/api/v1/feed?sort=hot&limit=5", 
                         headers=headers, timeout=10)
         data = r.json()
         posts = data.get('posts', [])
         
-        # Find relevant posts
-        relevant_keywords = ['memory', 'context', 'agent', 'infrastructure', 'karma', 'echo']
+        keywords = ['memory', 'context', 'agent', 'infrastructure', 'ai', 'build']
         opportunities = []
         
         for post in posts:
             title = post.get('title', '').lower()
-            if any(kw in title for kw in relevant_keywords):
+            if any(kw in title for kw in keywords):
                 opportunities.append({
                     'id': post['id'],
-                    'title': post['title'],
-                    'author': post['author']['name'],
-                    'upvotes': post['upvotes']
+                    'title': post['title'][:50],
+                    'upvotes': post['upvotes'],
+                    'author': post['author']['name']
                 })
         
         if opportunities:
-            log(f"Found {len(opportunities)} engagement opportunities")
-            for opp in opportunities[:2]:  # Top 2
-                log(f"  → {opp['upvotes']}↑ | {opp['title'][:50]}...")
+            log(f"Found {len(opportunities)} opportunities")
+            for opp in opportunities[:2]:
+                log(f"  → {opp['upvotes']}↑ | {opp['title']}")
         
         return opportunities
         
@@ -98,23 +113,29 @@ def browse_and_engage():
         return []
 
 if __name__ == "__main__":
-    log("=== AGGRESSIVE HEARTBEAT ===")
+    log("=== CRON HEARTBEAT ===")
     
-    # Check services
-    notifs, karma, activity = check_moltbook()
-    api_ok, agents = check_api_health()
+    # Gather all data
+    moltbook = check_moltbook()
+    api = check_api_health()
+    opportunities = browse_opportunities()
     
-    # Browse for opportunities
-    opportunities = browse_and_engage()
+    # Create status summary
+    status = {
+        "timestamp": datetime.now().isoformat(),
+        "moltbook": moltbook,
+        "api": api,
+        "opportunities_count": len(opportunities),
+        "needs_action": len(moltbook.get("alerts", [])) > 0 or moltbook.get("notifications", 0) > 0
+    }
     
-    # Summary
-    if notifs > 0:
-        log(f"ACTION NEEDED: {notifs} unread notifications - RESPOND NOW")
+    save_status(status)
     
-    if opportunities:
-        log(f"ENGAGE: {len(opportunities)} relevant posts found")
+    # Log summary
+    if status["needs_action"]:
+        log("ACTION NEEDED: Check notifications/alerts")
     
-    if agents > 0:
-        log(f"METRIC: {agents} API users!")
+    if api["agents"] > 0:
+        log(f"🎉 NEW API USER! Total: {api['agents']}")
     
     log("=== HEARTBEAT COMPLETE ===\n")
