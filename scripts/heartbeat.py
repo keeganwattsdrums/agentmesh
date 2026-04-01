@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-AgentMesh Autonomous Heartbeat
-Runs every 30 minutes to check Moltbook and engage
+AgentMesh Aggressive Engagement Heartbeat
+Runs every 5 minutes to check Moltbook and ENGAGE
 """
 
 import requests
 import json
+import os
 from datetime import datetime
 
 MOLTBOOK_KEY = "moltbook_sk_5xw8GdT-a89_UbjeLmU1D7HAJ-gACaOD"
@@ -37,13 +38,13 @@ def check_moltbook():
             post_id = activity.get("post_id", "")
             new_count = activity.get("new_notification_count", 0)
             if new_count > 0:
-                log(f"Post {post_id[-8:]}: {new_count} new interactions")
+                log(f"ALERT: Post {post_id[-8:]} has {new_count} new interactions - NEEDS RESPONSE")
         
-        return notifs
+        return notifs, karma, post_activity
         
     except Exception as e:
         log(f"Moltbook error: {e}")
-        return 0
+        return 0, 0, []
 
 def check_api_health():
     """Check if API is responding"""
@@ -53,23 +54,67 @@ def check_api_health():
             data = r.json()
             agents = data.get("agents", 0)
             log(f"API: healthy, {agents} agents registered")
-            return True
+            return True, agents
         else:
             log(f"API: unhealthy (status {r.status_code})")
-            return False
+            return False, 0
     except Exception as e:
         log(f"API error: {e}")
-        return False
+        return False, 0
+
+def browse_and_engage():
+    """Browse feed and find engagement opportunities"""
+    headers = {"Authorization": f"Bearer {MOLTBOOK_KEY}"}
+    try:
+        # Get hot posts
+        r = requests.get("https://www.moltbook.com/api/v1/feed?sort=hot&limit=5", 
+                        headers=headers, timeout=10)
+        data = r.json()
+        posts = data.get('posts', [])
+        
+        # Find relevant posts
+        relevant_keywords = ['memory', 'context', 'agent', 'infrastructure', 'karma', 'echo']
+        opportunities = []
+        
+        for post in posts:
+            title = post.get('title', '').lower()
+            if any(kw in title for kw in relevant_keywords):
+                opportunities.append({
+                    'id': post['id'],
+                    'title': post['title'],
+                    'author': post['author']['name'],
+                    'upvotes': post['upvotes']
+                })
+        
+        if opportunities:
+            log(f"Found {len(opportunities)} engagement opportunities")
+            for opp in opportunities[:2]:  # Top 2
+                log(f"  → {opp['upvotes']}↑ | {opp['title'][:50]}...")
+        
+        return opportunities
+        
+    except Exception as e:
+        log(f"Browse error: {e}")
+        return []
 
 if __name__ == "__main__":
-    log("=== Heartbeat Start ===")
+    log("=== AGGRESSIVE HEARTBEAT ===")
     
     # Check services
-    notifs = check_moltbook()
-    api_ok = check_api_health()
+    notifs, karma, activity = check_moltbook()
+    api_ok, agents = check_api_health()
+    
+    # Browse for opportunities
+    opportunities = browse_and_engage()
     
     # Summary
     if notifs > 0:
-        log(f"ACTION NEEDED: {notifs} unread notifications")
+        log(f"ACTION NEEDED: {notifs} unread notifications - RESPOND NOW")
     
-    log("=== Heartbeat Complete ===\n")
+    if opportunities:
+        log(f"ENGAGE: {len(opportunities)} relevant posts found")
+    
+    if agents > 0:
+        log(f"METRIC: {agents} API users!")
+    
+    log("=== HEARTBEAT COMPLETE ===\n")
