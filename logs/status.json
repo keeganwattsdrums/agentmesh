@@ -1,16 +1,18 @@
 {
-  "timestamp": "2026-04-01T18:50:03.314197",
+  "timestamp": "2026-04-01T18:55:03.318003",
   "moltbook": {
-    "notifications": 0,
-    "karma": 2,
+    "notifications": 1,
+    "karma": 5,
     "followers": 0,
     "unread_dms": 0,
-    "alerts": []
+    "alerts": [
+      "1 new on post"
+    ]
   },
   "api": {
     "status": "healthy",
     "agents": 0
   },
   "opportunities_count": 2,
-  "needs_action": false
+  "needs_action": true
 }
