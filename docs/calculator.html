@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Memory Calculator — AgentMesh</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            text-align: center;
+            color: #a0a0b0;
+            margin-bottom: 40px;
+        }
+        .calculator {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b0b0c0;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.2);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover { transform: translateY(-2px); }
+        .results {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 16px;
+            display: none;
+        }
+        .results.show { display: block; }
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .result-item:last-child { border-bottom: none; }
+        .result-label { color: #b0b0c0; }
+        .result-value {
+            font-weight: 600;
+            color: #667eea;
+        }
+        .cta {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .cta a {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .urgency {
+            margin-top: 15px;
+            color: #f39c12;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Memory Calculator</h1>
+        <p class="subtitle">Calculate your AI agent's memory needs</p>
+        
+        <div class="calculator">
+            <div class="input-group">
+                <label>Average tokens per turn</label>
+                <input type="number" id="tokensPerTurn" value="2000" placeholder="e.g., 2000">
+            </div>
+            
+            <div class="input-group">
+                <label>Average conversation length (turns)</label>
+                <input type="number" id="conversationLength" value="20" placeholder="e.g., 20">
+            </div>
+            
+            <div class="input-group">
+                <label>Active conversations per day</label>
+                <input type="number" id="conversationsPerDay" value="50" placeholder="e.g., 50">
+            </div>
+            
+            <div class="input-group">
+                <label>Memory retention (days)</label>
+                <input type="number" id="retentionDays" value="30" placeholder="e.g., 30">
+            </div>
+            
+            <button onclick="calculate()">Calculate Memory Needs</button>
+        </div>
+        
+        <div class="results" id="results">
+            <h3>Your Results</h3>
+            
+            <div class="result-item">
+                <span class="result-label">Daily token usage:</span>
+                <span class="result-value" id="dailyTokens">-</span>
+            </div>
+            
+            <div class="result-item">
+                <span class="result-label">Context limit hits per day:</span>
+                <span class="result-value" id="contextHits">-</span>
+            </div>
+            
+            <div class="result-item">
+                <span class="result-label">Memory needed (AgentMesh):</span>
+                <span class="result-value" id="memoryNeeded">-</span>
+            </div>
+            
+            <div class="result-item">
+                <span class="result-label">Cost without AgentMesh:</span>
+                <span class="result-value" id="costWithout">-</span>
+            </div>
+            
+            <div class="result-item">
+                <span class="result-label">Monthly savings:</span>
+                <span class="result-value" id="savings">-</span>
+            </div>
+            
+            <div class="cta">
+                <a href="https://paypal.me/keeganwattsmusic/47">Get AgentMesh Pro — $47/month</a>
+                <p class="urgency">🔥 Only 3 founding spots left</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function calculate() {
+            const tokensPerTurn = parseInt(document.getElementById('tokensPerTurn').value) || 2000;
+            const conversationLength = parseInt(document.getElementById('conversationLength').value) || 20;
+            const conversationsPerDay = parseInt(document.getElementById('conversationsPerDay').value) || 50;
+            const retentionDays = parseInt(document.getElementById('retentionDays').value) || 30;
+            
+            const contextWindow = 128000; // Typical context window
+            const dailyTokens = tokensPerTurn * conversationLength * conversationsPerDay;
+            const contextHits = Math.ceil(dailyTokens / contextWindow);
+            const memoryNeeded = Math.ceil((dailyTokens * retentionDays) / 1000000 * 100) / 100;
+            const costWithout = contextHits * 10; // Assuming $10 per context overflow
+            const savings = costWithout - 47;
+            
+            document.getElementById('dailyTokens').textContent = dailyTokens.toLocaleString() + ' tokens';
+            document.getElementById('contextHits').textContent = contextHits + ' times';
+            document.getElementById('memoryNeeded').textContent = memoryNeeded + ' GB';
+            document.getElementById('costWithout').textContent = '$' + costWithout + '/month';
+            document.getElementById('savings').textContent = '$' + Math.max(0, savings) + '/month';
+            
+            document.getElementById('results').classList.add('show');
+        }
+    </script>
+</body>
+</html>
