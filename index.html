@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentMesh — Infrastructure for AI Agents</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #fafafa;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .features {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .feature {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .feature h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .feature p {
+            color: #666;
+            line-height: 1.7;
+        }
+        .code-section {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 80px 20px;
+        }
+        .code-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .code-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .code-block {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 30px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        .code-block .comment { color: #6272a4; }
+        .code-block .keyword { color: #ff79c6; }
+        .code-block .string { color: #f1fa8c; }
+        .code-block .function { color: #50fa7b; }
+        .pricing {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pricing h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        .pricing-card.featured {
+            border: 3px solid #667eea;
+            transform: scale(1.05);
+        }
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #667eea;
+            margin: 20px 0;
+        }
+        .price span {
+            font-size: 1rem;
+            color: #999;
+        }
+        .pricing-card ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>AgentMesh</h1>
+        <p>The infrastructure platform for AI agents. Cross-session memory, intelligent context management, and visual workflow orchestration — in one line of code.</p>
+        <a href="#pricing" class="cta-button">Get Started Free</a>
+        <a href="https://github.com/agentmesh/agentmesh" class="cta-button secondary">View on GitHub</a>
+    </section>
+
+    <section class="features">
+        <h2>Everything you need to build production AI agents</h2>
+        
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">🧠</div>
+                <h3>Persistent Memory</h3>
+                <p>Agents remember across sessions. Semantic search lets them recall exactly what they need, when they need it.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Context Management</h3>
+                <p>Never hit token limits again. Intelligent truncation preserves what matters while staying within budget.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🔧</div>
+                <h3>Zero Config Setup</h3>
+                <p>One line of code. No complex infrastructure. Works with any LLM framework — LangChain, CrewAI, or raw OpenAI.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="code-section">
+        <div class="code-container">
+            <h2>One line to add superpowers to your agent</h2>
+            
+            <div class="code-block">
+<span class="comment"># Install: pip install agentmesh</span>
+<span class="keyword">from</span> agentmesh <span class="keyword">import</span> Agent
+
+<span class="comment"># Create an agent with persistent memory</span>
+agent = Agent(
+    name=<span class="string">"customer-support"</span>,
+    api_key=<span class="string">"your-api-key"</span>,
+    memory=<span class="keyword">True</span>,
+    context_limit=<span class="string">8000</span>
+)
+
+<span class="comment"># Store memories — persists across sessions</span>
+agent.<span class="function">remember</span>(<span class="string">"User prefers email over phone"</span>,
+         tags=[<span class="string">"preference"</span>, <span class="string">"contact"</span>])
+
+<span class="comment"># Recall relevant context automatically</span>
+memories = agent.<span class="function">recall</span>(<span class="string">"how should I contact?"</span>)
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Simple, usage-based pricing</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price">Free</div>
+                <ul>
+                    <li>1,000 operations/month</li>
+                    <li>1 agent</li>
+                    <li>7-day memory retention</li>
+                    <li>Community support</li>
+                </ul>
+                <a href="#" class="cta-button">Start Free</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <h3>Pro</h3>
+                <div class="price">$99<span>/month</span></div>
+                <ul>
+                    <li>100,000 operations/month</li>
+                    <li>10 agents</li>
+                    <li>Unlimited memory</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Business</h3>
+                <div class="price">$299<span>/month</span></div>
+                <ul>
+                    <li>1,000,000 operations/month</li>
+                    <li>Unlimited agents</li>
+                    <li>Team collaboration</li>
+                    <li>SSO & audit logs</li>
+                </ul>
+                <a href="#" class="cta-button secondary">Contact Sales</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 AgentMesh. Built for engineers, by engineers.</p>
+    </footer>
+</body>
+</html>
