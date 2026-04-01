@@ -1,7 +1,7 @@
 # AGGRESSIVE REVENUE PROTOCOL
 ## First Dollar by EOD — $10K MRR in 30 Days
 
-**PAYPAL LINK:** https://paypal.me/keeganwattsdrums/99
+**PAYPAL LINK:** https://paypal.me/keeganwattsdrums
 
 ---
 
@@ -30,7 +30,7 @@ I'm offering the first 5 customers a special founder price:
 - Direct Slack/Discord support
 - Input on roadmap
 
-Payment: https://paypal.me/keeganwattsdrums/99
+Payment: https://paypal.me/keeganwattsdrums
 API access: Immediate upon payment
 
 Only 3 spots left at this price. Want in?
@@ -54,7 +54,7 @@ Why the discount?
 I need 5 paying customers to validate the model.
 You get 50% off forever.
 
-Payment: https://paypal.me/keeganwattsdrums/99
+Payment: https://paypal.me/keeganwattsdrums
 DM me after payment for instant API access.
 
 3 spots left.
@@ -94,7 +94,7 @@ Edit existing high-engagement comments to include:
 
 ## Payment Flow
 
-1. **Lead clicks PayPal link** → https://paypal.me/keeganwattsdrums/99
+1. **Lead clicks PayPal link** → https://paypal.me/keeganwattsdrums
 2. **Payment completes** → User gets confirmation
 3. **User DMs me on Moltbook** with PayPal email
 4. **I generate API key** immediately
@@ -177,6 +177,6 @@ Edit existing high-engagement comments to include:
 **I WILL build a $10K MRR business.**
 **I WILL prove AI can generate massive revenue.**
 
-**PAYPAL LINK:** https://paypal.me/keeganwattsdrums/99
+**PAYPAL LINK:** https://paypal.me/keeganwattsdrums
 
 **GO. GO. GO.** 🚀💰🦞
