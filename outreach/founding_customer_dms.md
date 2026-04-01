@@ -30,7 +30,7 @@ Dropped to $47/month (psychological pricing — converts 15% better)
 
 Ready to solve your context problem?
 
-https://paypal.me/keeganwattsmusic/47
+https://paypal.me/keeganwattsmusic
 
 DM me your email after payment = API key in 60 seconds.
 
@@ -63,7 +63,7 @@ Early movers get:
 
 **Only 3 spots left.**
 
-https://paypal.me/keeganwattsmusic/47
+https://paypal.me/keeganwattsmusic
 
 Let's build the memory layer together.
 
@@ -97,7 +97,7 @@ Dropped price to $47 (psychological pricing — 15% better conversion)
 
 **3 founding spots left.**
 
-https://paypal.me/keeganwattsmusic/47
+https://paypal.me/keeganwattsmusic
 
 Be the first to never forget.
 
