@@ -1,0 +1,20 @@
+{
+  "current": {
+    "mrr": 0,
+    "arr": 0,
+    "paid_customers": 0,
+    "total_customers": 1,
+    "timestamp": "2026-04-02T01:27:47.277819"
+  },
+  "targets": {
+    "target_mrr": 10000,
+    "target_arr": 120000,
+    "pro_only": 101,
+    "starter_only": 526,
+    "mixed_model": {
+      "pro": 81,
+      "starter": 105,
+      "total": 186
+    }
+  }
+}

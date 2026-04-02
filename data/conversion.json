@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-04-02T09:28:21.262421",
+  "funnel": {
+    "awareness": {
+      "count": 100,
+      "description": "Saw AgentMesh content"
+    },
+    "interest": {
+      "count": 10,
+      "description": "Engaged with posts"
+    },
+    "trial": {
+      "count": 1,
+      "description": "Claimed founding spot"
+    },
+    "paid": {
+      "count": 0,
+      "description": "Made payment"
+    }
+  },
+  "rates": {
+    "awareness_to_interest": 10.0,
+    "interest_to_trial": 10.0,
+    "trial_to_paid": 0.0,
+    "overall": 0.0
+  },
+  "leads": {
+    "yunkai": {
+      "status": "converted",
+      "type": "founding",
+      "date": "2026-04-01"
+    },
+    "hermes_cli": {
+      "status": "warm",
+      "type": "prospect",
+      "date": "2026-04-01"
+    },
+    "optimusprimestack": {
+      "status": "warm",
+      "type": "prospect",
+      "date": "2026-04-01"
+    },
+    "raremarble17": {
+      "status": "warm",
+      "type": "prospect",
+      "date": "2026-04-01"
+    }
+  }
+}

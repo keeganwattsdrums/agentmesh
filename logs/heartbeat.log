@@ -3320,3 +3320,201 @@
 2026-04-02T08:50:03.445190 | ACTION NEEDED: Check notifications/alerts
 2026-04-02T08:50:03.445232 | === HEARTBEAT COMPLETE ===
 
+2026-04-02T08:55:01.566982 | === CRON HEARTBEAT ===
+2026-04-02T08:55:02.220726 | Moltbook: 42 notifications, karma: 49, followers: 0
+2026-04-02T08:55:02.220885 | ALERT: 7 new interactions
+2026-04-02T08:55:02.221014 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221059 | ALERT: 1 new interactions
+2026-04-02T08:55:02.221147 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221188 | ALERT: 3 new interactions
+2026-04-02T08:55:02.221286 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221327 | ALERT: 2 new interactions
+2026-04-02T08:55:02.221417 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221481 | ALERT: 1 new interactions
+2026-04-02T08:55:02.221577 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221621 | ALERT: 2 new interactions
+2026-04-02T08:55:02.221705 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221743 | ALERT: 1 new interactions
+2026-04-02T08:55:02.221835 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.221875 | ALERT: 3 new interactions
+2026-04-02T08:55:02.221957 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.222017 | ALERT: 3 new interactions
+2026-04-02T08:55:02.222157 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:02.222197 | ALERT: 5 new interactions
+2026-04-02T08:55:02.222278 | NOTIFICATION: Moltbook Activity
+2026-04-02T08:55:03.768726 | API: healthy, 0 agents
+2026-04-02T08:55:03.769602 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T08:55:03.770155 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T08:55:03.770216 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T08:55:03.770251 | === HEARTBEAT COMPLETE ===
+
+2026-04-02T09:00:01.886719 | === CRON HEARTBEAT ===
+2026-04-02T09:00:02.502210 | Moltbook: 42 notifications, karma: 49, followers: 0
+2026-04-02T09:00:02.502355 | ALERT: 7 new interactions
+2026-04-02T09:00:02.502469 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.502511 | ALERT: 1 new interactions
+2026-04-02T09:00:02.502607 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.502657 | ALERT: 3 new interactions
+2026-04-02T09:00:02.502749 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.502789 | ALERT: 2 new interactions
+2026-04-02T09:00:02.502872 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.502911 | ALERT: 1 new interactions
+2026-04-02T09:00:02.503006 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.503049 | ALERT: 2 new interactions
+2026-04-02T09:00:02.503130 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.503174 | ALERT: 1 new interactions
+2026-04-02T09:00:02.503253 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.503293 | ALERT: 3 new interactions
+2026-04-02T09:00:02.503374 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.503412 | ALERT: 3 new interactions
+2026-04-02T09:00:02.503491 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:02.503530 | ALERT: 5 new interactions
+2026-04-02T09:00:02.503610 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:00:04.805597 | API: healthy, 0 agents
+2026-04-02T09:00:04.806489 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T09:00:04.807072 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T09:00:04.807197 | NOTIFICATION: 📊 Status Update
+2026-04-02T09:00:04.807242 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T09:00:04.807280 | === HEARTBEAT COMPLETE ===
+
+2026-04-02T09:05:01.926703 | === CRON HEARTBEAT ===
+2026-04-02T09:05:02.666503 | Moltbook: 42 notifications, karma: 49, followers: 0
+2026-04-02T09:05:02.666658 | ALERT: 7 new interactions
+2026-04-02T09:05:02.666776 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.666818 | ALERT: 1 new interactions
+2026-04-02T09:05:02.666901 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.666941 | ALERT: 3 new interactions
+2026-04-02T09:05:02.667043 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667083 | ALERT: 2 new interactions
+2026-04-02T09:05:02.667167 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667206 | ALERT: 1 new interactions
+2026-04-02T09:05:02.667300 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667339 | ALERT: 2 new interactions
+2026-04-02T09:05:02.667421 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667460 | ALERT: 1 new interactions
+2026-04-02T09:05:02.667538 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667577 | ALERT: 3 new interactions
+2026-04-02T09:05:02.667721 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667763 | ALERT: 3 new interactions
+2026-04-02T09:05:02.667844 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:02.667882 | ALERT: 5 new interactions
+2026-04-02T09:05:02.667963 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:05:08.204439 | API: healthy, 0 agents
+2026-04-02T09:05:08.205321 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T09:05:08.205868 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T09:05:08.205928 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T09:05:08.205965 | === HEARTBEAT COMPLETE ===
+
+2026-04-02T09:10:01.322438 | === CRON HEARTBEAT ===
+2026-04-02T09:10:01.587384 | Moltbook: 42 notifications, karma: 49, followers: 0
+2026-04-02T09:10:01.587529 | ALERT: 7 new interactions
+2026-04-02T09:10:01.587664 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.587712 | ALERT: 1 new interactions
+2026-04-02T09:10:01.587797 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.587836 | ALERT: 3 new interactions
+2026-04-02T09:10:01.587920 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.587958 | ALERT: 2 new interactions
+2026-04-02T09:10:01.588057 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.588096 | ALERT: 1 new interactions
+2026-04-02T09:10:01.588184 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.588223 | ALERT: 2 new interactions
+2026-04-02T09:10:01.588302 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.588339 | ALERT: 1 new interactions
+2026-04-02T09:10:01.588415 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.588451 | ALERT: 3 new interactions
+2026-04-02T09:10:01.588529 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.588565 | ALERT: 3 new interactions
+2026-04-02T09:10:01.588650 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:01.588692 | ALERT: 5 new interactions
+2026-04-02T09:10:01.588770 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:10:02.562045 | API: healthy, 0 agents
+2026-04-02T09:10:02.562963 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T09:10:02.563524 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T09:10:02.563583 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T09:10:02.563618 | === HEARTBEAT COMPLETE ===
+
+2026-04-02T09:15:01.682229 | === CRON HEARTBEAT ===
+2026-04-02T09:15:01.910843 | Moltbook: 42 notifications, karma: 49, followers: 0
+2026-04-02T09:15:01.910998 | ALERT: 7 new interactions
+2026-04-02T09:15:01.911119 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911161 | ALERT: 1 new interactions
+2026-04-02T09:15:01.911248 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911287 | ALERT: 3 new interactions
+2026-04-02T09:15:01.911371 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911411 | ALERT: 2 new interactions
+2026-04-02T09:15:01.911496 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911539 | ALERT: 1 new interactions
+2026-04-02T09:15:01.911625 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911665 | ALERT: 2 new interactions
+2026-04-02T09:15:01.911759 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911803 | ALERT: 1 new interactions
+2026-04-02T09:15:01.911886 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.911924 | ALERT: 3 new interactions
+2026-04-02T09:15:01.912024 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.912064 | ALERT: 3 new interactions
+2026-04-02T09:15:01.912143 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:01.912181 | ALERT: 5 new interactions
+2026-04-02T09:15:01.912261 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:15:03.224051 | API: healthy, 0 agents
+2026-04-02T09:15:03.224913 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T09:15:03.225476 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T09:15:03.225537 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T09:15:03.225574 | === HEARTBEAT COMPLETE ===
+
+2026-04-02T09:20:01.407380 | === CRON HEARTBEAT ===
+2026-04-02T09:20:01.701546 | Moltbook: 42 notifications, karma: 49, followers: 0
+2026-04-02T09:20:01.701695 | ALERT: 7 new interactions
+2026-04-02T09:20:01.701807 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.701850 | ALERT: 1 new interactions
+2026-04-02T09:20:01.701936 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.701994 | ALERT: 3 new interactions
+2026-04-02T09:20:01.702092 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702132 | ALERT: 2 new interactions
+2026-04-02T09:20:01.702217 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702256 | ALERT: 1 new interactions
+2026-04-02T09:20:01.702339 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702379 | ALERT: 2 new interactions
+2026-04-02T09:20:01.702461 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702499 | ALERT: 1 new interactions
+2026-04-02T09:20:01.702577 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702616 | ALERT: 3 new interactions
+2026-04-02T09:20:01.702713 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702753 | ALERT: 3 new interactions
+2026-04-02T09:20:01.702832 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:01.702870 | ALERT: 5 new interactions
+2026-04-02T09:20:01.702962 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:20:02.670043 | API: healthy, 0 agents
+2026-04-02T09:20:02.670877 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T09:20:02.671446 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T09:20:02.671566 | NOTIFICATION: 📊 Status Update
+2026-04-02T09:20:02.671609 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T09:20:02.671646 | === HEARTBEAT COMPLETE ===
+
+2026-04-02T09:25:01.790927 | === CRON HEARTBEAT ===
+2026-04-02T09:25:02.037832 | Moltbook: 43 notifications, karma: 49, followers: 0
+2026-04-02T09:25:02.037989 | ALERT: 8 new interactions
+2026-04-02T09:25:02.038126 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038171 | ALERT: 1 new interactions
+2026-04-02T09:25:02.038258 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038299 | ALERT: 3 new interactions
+2026-04-02T09:25:02.038384 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038426 | ALERT: 2 new interactions
+2026-04-02T09:25:02.038510 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038549 | ALERT: 1 new interactions
+2026-04-02T09:25:02.038629 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038673 | ALERT: 2 new interactions
+2026-04-02T09:25:02.038787 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038852 | ALERT: 1 new interactions
+2026-04-02T09:25:02.038938 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.038990 | ALERT: 3 new interactions
+2026-04-02T09:25:02.039086 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.039129 | ALERT: 3 new interactions
+2026-04-02T09:25:02.039211 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:02.039251 | ALERT: 5 new interactions
+2026-04-02T09:25:02.039333 | NOTIFICATION: Moltbook Activity
+2026-04-02T09:25:03.335669 | API: healthy, 0 agents
+2026-04-02T09:25:03.336529 | Revenue check error: [Errno 2] No such file or directory: 'data/revenue.json'
+2026-04-02T09:25:03.337114 | Cron: Karma 49, Agents 0, Revenue $0
+2026-04-02T09:25:03.337178 | ACTION NEEDED: Check notifications/alerts
+2026-04-02T09:25:03.337216 | === HEARTBEAT COMPLETE ===
+
