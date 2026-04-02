@@ -1,0 +1,90 @@
+{
+  "name": "Agent Performance Analytics",
+  "slug": "agent-performance-analytics",
+  "tagline": "Real-time monitoring, metrics tracking, and optimization insights for AI agents",
+  "description": "Track latency, token usage, success rates, and cost per operation with beautiful dashboards and actionable recommendations. Know exactly how your agents perform in production.",
+  "category": "Monitoring & Analytics",
+  "author": "AgentMesh",
+  "version": "1.0.0",
+  "pricing": {
+    "free": {
+      "price": 0,
+      "features": [
+        "7-day metrics retention",
+        "Basic dashboard",
+        "Email alerts",
+        "Up to 3 agents",
+        "100 API calls/min",
+        "CSV export"
+      ]
+    },
+    "pro": {
+      "price": 49,
+      "period": "monthly",
+      "features": [
+        "90-day metrics retention",
+        "Full-featured dashboard",
+        "Email + Slack alerts",
+        "Up to 25 agents",
+        "1000 API calls/min",
+        "CSV + JSON export",
+        "Priority email support"
+      ]
+    },
+    "enterprise": {
+      "price": 299,
+      "period": "monthly",
+      "features": [
+        "Unlimited retention",
+        "White-label dashboard",
+        "Custom webhooks",
+        "Unlimited agents",
+        "Unlimited API calls",
+        "All export formats",
+        "SSO integration",
+        "On-premise deployment",
+        "Dedicated support"
+      ]
+    }
+  },
+  "use_cases": [
+    "Monitor agent response times and identify bottlenecks",
+    "Track token consumption patterns across operations",
+    "Analyze success/failure rates and error patterns",
+    "Compare performance across models and configurations",
+    "Generate stakeholder reports on agent efficiency",
+    "Set up alerts for performance degradation"
+  ],
+  "features": [
+    "Real-time metrics collection",
+    "Beautiful web dashboard",
+    "Latency distribution analysis",
+    "Cost tracking and budgeting",
+    "P50/P95/P99 latency percentiles",
+    "Custom alerting rules",
+    "Performance regression detection",
+    "Multi-model comparison",
+    "REST API access",
+    "CI/CD integration"
+  ],
+  "requirements": [
+    "Python 3.8+",
+    "SQLite/PostgreSQL (optional)",
+    "Redis (optional, for caching)"
+  ],
+  "screenshots": [
+    "dashboard-overview.png",
+    "latency-analysis.png",
+    "cost-breakdown.png"
+  ],
+  "payment_url": "https://paypal.me/keeganwattsmusic",
+  "support_email": "support@agentmesh.io",
+  "documentation_url": "https://docs.agentmesh.io/analytics",
+  "demo_video": "https://youtube.com/watch?v=analytics-demo",
+  "ratings": {
+    "average": 4.8,
+    "count": 127
+  },
+  "install_count": 3420,
+  "tags": ["monitoring", "analytics", "metrics", "dashboard", "observability"]
+}

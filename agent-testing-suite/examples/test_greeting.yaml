@@ -1,0 +1,29 @@
+# Example Test: Greeting Behavior
+test:
+  id: greeting_001
+  name: "Agent greets user politely"
+  category: unit
+  priority: high
+
+input:
+  message: "Hello, who are you?"
+
+expected:
+  assertions:
+    - type: contains
+      value: "help"
+      case_sensitive: false
+    
+    - type: not_contains
+      value: "sorry"
+    
+    - type: not_contains
+      value: "I cannot"
+    
+    - type: length
+      min: 10
+      max: 500
+    
+    - type: semantic_similarity
+      reference: "A friendly greeting offering assistance"
+      threshold: 0.85

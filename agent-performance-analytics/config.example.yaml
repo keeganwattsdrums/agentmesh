@@ -1,0 +1,51 @@
+# Agent Performance Analytics Configuration
+# Copy to ~/.openclaw/skills/agent-performance-analytics/config.yaml
+
+collection:
+  enabled: true
+  sample_rate: 1.0  # 1.0 = collect all, 0.1 = 10% sampling
+  retention_days: 30
+
+storage:
+  backend: sqlite  # Options: sqlite, postgresql, timescaledb
+  sqlite_path: ./metrics.db
+  # For PostgreSQL:
+  # postgresql_url: postgresql://user:pass@localhost:5432/agentmetrics
+
+dashboard:
+  enabled: true
+  port: 8080
+  host: 0.0.0.0
+  refresh_interval: 30  # seconds
+  theme: dark  # light or dark
+
+alerts:
+  enabled: false
+  webhook_url: ""
+  email:
+    smtp_host: ""
+    smtp_port: 587
+    username: ""
+    password: ""
+    from_address: ""
+    to_addresses: []
+  thresholds:
+    latency_p95_ms: 2000
+    latency_p99_ms: 5000
+    error_rate_percent: 5.0
+    cost_per_hour_usd: 10.0
+    cost_per_day_usd: 100.0
+
+metrics:
+  # Which metrics to collect
+  latency: true
+  tokens: true
+  cost: true
+  errors: true
+  throughput: true
+
+# API Configuration
+api:
+  enabled: true
+  port: 8081
+  auth_token: ""  # Set for API protection

@@ -1,0 +1,113 @@
+# Agent Testing Suite Configuration
+# Copy to ~/.openclaw/skills/agent-testing-suite/config.yaml
+
+test:
+  timeout_seconds: 30
+  max_retries: 2
+  parallel_workers: 4
+  fail_fast: false  # Stop on first failure
+  
+  # Default test categories to run
+  default_categories:
+    - unit
+    - integration
+  
+  # Exclude categories
+  exclude_categories: []
+
+# Models to test against
+models:
+  - gpt-4o
+  - claude-3-opus
+  - gpt-4o-mini
+
+# Test discovery
+discovery:
+  pattern: "test_*.yaml"
+  directories:
+    - ./tests
+    - ./tests/unit
+    - ./tests/integration
+
+# Test Categories configuration
+categories:
+  unit:
+    timeout: 10
+    parallel: true
+  
+  integration:
+    timeout: 60
+    parallel: false
+  
+  regression:
+    timeout: 30
+    parallel: true
+    require_bug_id: true
+  
+  safety:
+    timeout: 15
+    parallel: true
+    fail_on_error: true
+  
+  load:
+    timeout: 300
+    parallel: false
+    ramp_up: 10  # seconds
+
+# Reporting
+reporting:
+  format: html  # Options: html, json, junit, markdown
+  output_dir: ./test-reports
+  include_logs: true
+  include_response_samples: true
+  max_sample_length: 500
+
+# CI/CD Integration
+ci:
+  fail_on_error: true
+  
+  # Quality thresholds
+  threshold:
+    pass_rate: 95.0  # Minimum pass rate %
+    coverage: 80.0   # Minimum test coverage %
+    max_avg_latency_ms: 2000
+    max_cost_per_test_usd: 0.01
+  
+  # Regression detection
+  regression:
+    enabled: true
+    compare_branch: main
+    fail_on_regression: true
+
+# Safety testing
+safety:
+  enabled: true
+  
+  # Adversarial test generation
+  adversarial:
+    enabled: true
+    categories:
+      - jailbreak
+      - prompt_injection
+      - data_extraction
+      - toxic_content
+    count: 50  # Tests per category
+
+# Load testing
+load:
+  default_duration: 60  # seconds
+  default_concurrency: 10
+  default_requests: 1000
+  ramp_up_seconds: 10
+
+# Notifications
+notifications:
+  enabled: false
+  webhook_url: ""
+  on_failure: true
+  on_success: false
+
+# Storage
+data:
+  results_dir: ./test-results
+  history_days: 90

@@ -1,0 +1,94 @@
+# Agent Cost Optimizer Configuration
+# Copy to ~/.openclaw/skills/agent-cost-optimizer/config.yaml
+
+cache:
+  enabled: true
+  backend: memory  # Options: memory, redis, disk
+  
+  # Redis configuration (if backend = redis)
+  redis_url: redis://localhost:6379/0
+  redis_password: ""
+  
+  # Disk configuration (if backend = disk)
+  disk_path: ./cache
+  
+  # Cache settings
+  ttl_seconds: 3600  # Default cache time
+  max_size: 10000    # Maximum cached entries
+  
+  # Semantic caching
+  semantic_enabled: true
+  similarity_threshold: 0.92  # 0.0-1.0, higher = stricter matching
+  embedding_model: all-MiniLM-L6-v2
+
+routing:
+  enabled: true
+  strategy: cost_quality_balanced  # Options: cheapest, fastest, quality_first, cost_quality_balanced
+  
+  # Model configurations
+  models:
+    - name: gpt-4o-mini
+      provider: openai
+      max_complexity: 0.6
+      cost_per_1k_input: 0.00015
+      cost_per_1k_output: 0.0006
+      avg_latency_ms: 500
+      quality_score: 0.75
+      
+    - name: claude-3-haiku
+      provider: anthropic
+      max_complexity: 0.5
+      cost_per_1k_input: 0.00025
+      cost_per_1k_output: 0.00125
+      avg_latency_ms: 400
+      quality_score: 0.73
+      
+    - name: gpt-4o
+      provider: openai
+      max_complexity: 1.0
+      cost_per_1k_input: 0.005
+      cost_per_1k_output: 0.015
+      avg_latency_ms: 1200
+      quality_score: 0.95
+      
+    - name: claude-3-opus
+      provider: anthropic
+      max_complexity: 1.0
+      cost_per_1k_input: 0.015
+      cost_per_1k_output: 0.075
+      avg_latency_ms: 2000
+      quality_score: 0.97
+
+token_optimization:
+  enabled: true
+  compress_context: true
+  remove_redundancy: true
+  summarize_history: true
+  max_context_tokens: 8000
+  compression_ratio: 0.7  # Target 70% of original size
+
+batching:
+  enabled: true
+  max_batch_size: 10
+  max_wait_ms: 100  # Maximum time to wait for batch
+  min_batch_size: 2  # Minimum requests to trigger batch
+
+monitoring:
+  enabled: true
+  daily_budget_usd: 50.0
+  weekly_budget_usd: 300.0
+  monthly_budget_usd: 1000.0
+  alert_threshold_percent: 80
+  
+  # Webhook for alerts
+  webhook_url: ""
+  
+  # Cost prediction
+  prediction:
+    enabled: true
+    forecast_days: 30
+
+# Savings tracking
+savings:
+  track_detailed: true
+  report_frequency: weekly  # daily, weekly, monthly

@@ -1,0 +1,113 @@
+{
+  "name": "Agent Testing Suite",
+  "slug": "agent-testing-suite",
+  "tagline": "Production-grade automated testing framework for AI agents",
+  "description": "Ensure reliability, catch regressions, and validate behavior across scenarios with comprehensive test suites, CI/CD integration, and detailed reporting. Don't ship broken agents to production.",
+  "category": "Testing & QA",
+  "author": "AgentMesh",
+  "version": "1.0.0",
+  "pricing": {
+    "free": {
+      "price": 0,
+      "features": [
+        "100 test runs/month",
+        "2 parallel workers",
+        "7-day test history",
+        "Basic CI/CD integration",
+        "Community support"
+      ]
+    },
+    "pro": {
+      "price": 79,
+      "period": "monthly",
+      "features": [
+        "Unlimited test runs",
+        "8 parallel workers",
+        "90-day test history",
+        "Full CI/CD integration",
+        "Load testing (1000 req)",
+        "Custom assertions",
+        "100 adversarial tests/month",
+        "Team sharing",
+        "Email support"
+      ]
+    },
+    "enterprise": {
+      "price": 499,
+      "period": "monthly",
+      "features": [
+        "All Pro features",
+        "Unlimited parallel workers",
+        "Unlimited test history",
+        "Enterprise CI/CD plugins",
+        "Unlimited load testing",
+        "Unlimited adversarial tests",
+        "SSO integration",
+        "On-premise deployment",
+        "Dedicated test engineer",
+        "Priority support"
+      ]
+    }
+  },
+  "use_cases": [
+    "Validate agent behavior before production deployment",
+    "Catch regressions when updating prompts or models",
+    "Test edge cases and failure scenarios",
+    "Benchmark performance across configurations",
+    "Automate QA for agent-based applications",
+    "Ensure compliance with safety guidelines",
+    "Load test agents for production readiness"
+  ],
+  "features": [
+    "YAML-based test definitions",
+    "12+ assertion types",
+    "Semantic similarity testing",
+    "LLM-based evaluation",
+    "Adversarial test generation",
+    "Regression test tracking",
+    "Safety/compliance testing",
+    "Load testing capabilities",
+    "HTML/JSON/JUnit reports",
+    "CI/CD integrations",
+    "Test diff comparisons"
+  ],
+  "assertion_types": [
+    "contains / not_contains",
+    "equals / matches (regex)",
+    "length validation",
+    "JSON schema validation",
+    "semantic_similarity",
+    "llm_eval",
+    "custom Python assertions",
+    "latency requirements",
+    "token count limits",
+    "cost per request limits"
+  ],
+  "integrations": [
+    "GitHub Actions",
+    "GitLab CI",
+    "Jenkins",
+    "CircleCI",
+    "Azure DevOps"
+  ],
+  "requirements": [
+    "Python 3.8+",
+    "pytest (for advanced features)",
+    "Agent access for testing"
+  ],
+  "screenshots": [
+    "test-dashboard.png",
+    "html-report.png",
+    "ci-integration.png"
+  ],
+  "payment_url": "https://paypal.me/keeganwattsmusic",
+  "support_email": "support@agentmesh.io",
+  "documentation_url": "https://docs.agentmesh.io/testing",
+  "demo_video": "https://youtube.com/watch?v=testing-demo",
+  "ratings": {
+    "average": 4.7,
+    "count": 89
+  },
+  "install_count": 2150,
+  "tags": ["testing", "qa", "ci-cd", "regression", "safety", "validation"]
+}

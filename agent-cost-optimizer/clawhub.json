@@ -1,0 +1,107 @@
+{
+  "name": "Agent Cost Optimizer",
+  "slug": "agent-cost-optimizer",
+  "tagline": "Reduce AI API bills by 30-60% with smart caching and intelligent model routing",
+  "description": "Intelligent cost optimization for AI agents. Implement semantic caching, automatic model routing, token optimization, and smart batching without sacrificing performance. Guaranteed savings or your money back.",
+  "category": "Cost Optimization",
+  "author": "AgentMesh",
+  "version": "1.0.0",
+  "pricing": {
+    "free": {
+      "price": 0,
+      "features": [
+        "Basic caching",
+        "2-model routing",
+        "7-day analytics",
+        "Monthly savings report",
+        "Community support"
+      ]
+    },
+    "pro": {
+      "price": 39,
+      "period": "monthly",
+      "features": [
+        "Semantic caching with embeddings",
+        "10-model routing",
+        "Advanced token optimization",
+        "Smart batching",
+        "90-day analytics",
+        "Weekly savings reports",
+        "20% minimum savings guarantee",
+        "API access",
+        "Email support"
+      ]
+    },
+    "enterprise": {
+      "price": 199,
+      "period": "monthly",
+      "features": [
+        "All Pro features",
+        "Unlimited model routing",
+        "Custom optimization strategies",
+        "Unlimited analytics",
+        "Real-time savings reports",
+        "30% minimum savings guarantee",
+        "Dedicated optimization consultant",
+        "Priority support",
+        "On-premise deployment"
+      ]
+    }
+  },
+  "use_cases": [
+    "Reduce monthly AI API bills significantly",
+    "Implement intelligent caching for repeated queries",
+    "Optimize prompts to reduce token consumption",
+    "Route requests to cost-effective models automatically",
+    "Batch operations for better pricing",
+    "Monitor and alert on cost anomalies"
+  ],
+  "features": [
+    "Semantic caching (20-40% savings)",
+    "Intelligent model routing (30-50% savings)",
+    "Token optimization (15-30% savings)",
+    "Smart batching (10-20% savings)",
+    "Exact match caching (10-25% savings)",
+    "Real-time cost dashboard",
+    "Savings calculator",
+    "Anomaly detection",
+    "Budget management",
+    "Cost prediction"
+  ],
+  "savings_guarantee": {
+    "pro": "20%",
+    "enterprise": "30%",
+    "period_days": 60,
+    "money_back": true
+  },
+  "testimonials": [
+    {
+      "quote": "Reduced our AI costs from $2,400/mo to $890/mo while maintaining the same quality.",
+      "author": "TechCorp Engineering"
+    },
+    {
+      "quote": "The semantic cache alone saved us 35% on our support bot.",
+      "author": "SupportAI Startup"
+    }
+  ],
+  "requirements": [
+    "Python 3.8+",
+    "Redis (recommended for caching)",
+    "OpenAI/Anthropic API access"
+  ],
+  "screenshots": [
+    "savings-dashboard.png",
+    "cost-breakdown.png",
+    "routing-config.png"
+  ],
+  "payment_url": "https://paypal.me/keeganwattsmusic",
+  "support_email": "support@agentmesh.io",
+  "documentation_url": "https://docs.agentmesh.io/cost-optimizer",
+  "demo_video": "https://youtube.com/watch?v=cost-demo",
+  "ratings": {
+    "average": 4.9,
+    "count": 203
+  },
+  "install_count": 5180,
+  "tags": ["cost-optimization", "caching", "savings", "budget", "routing"]
+}
