@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-02T16:50:12.678649",
+  "timestamp": "2026-04-02T16:55:02.987750",
   "moltbook": {
     "notifications": 48,
     "karma": 49,
@@ -19,9 +19,8 @@
     ]
   },
   "api": {
-    "status": "down",
-    "agents": 0,
-    "error": "HTTPSConnectionPool(host='cuddly-bears-punch.loca.lt', port=443): Read timed out. (read timeout=10)"
+    "status": "healthy",
+    "agents": 0
   },
   "revenue": {
     "customers": 0,
