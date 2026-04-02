@@ -1,0 +1,300 @@
+# Competitor Reference Data
+# Baseline information for tracked competitors
+
+competitors:
+  - name: Mem0
+    category: memory
+    website: https://mem0.ai
+    pricing_url: https://mem0.ai/pricing
+    docs_url: https://docs.mem0.ai
+    description: Memory layer for AI agents with long-term context awareness
+    founded: "2024"
+    funding: Y Combinator
+    key_features:
+      - Long-term memory for agents
+      - Multi-user support
+      - Context-aware retrieval
+      - Memory graph visualization
+      - Adaptive personalization
+    pricing:
+      - tier: Developer
+        price: 0
+        unit: free
+        limits: 10k requests/month, 1M tokens
+      - tier: Pro
+        price: 29
+        unit: month
+        limits: 100k requests, priority support
+      - tier: Enterprise
+        price: null
+        unit: custom
+        limits: Unlimited, SLA, dedicated support
+    integrations:
+      - OpenAI
+      - LangChain
+      - LlamaIndex
+      - Python/JS SDKs
+    positioning: Developer-first memory infrastructure
+    target_audience: AI agent builders, LLM application developers
+    differentiators:
+      - Simple API design
+      - Memory graph visualization
+      - Self-host option available
+      - Multi-modal memory support
+
+  - name: LangSmith
+    category: observability
+    website: https://smith.langchain.com
+    pricing_url: https://smith.langchain.com/pricing
+    docs_url: https://docs.smith.langchain.com
+    description: LLM observability and evaluation platform by LangChain
+    founded: "2023"
+    funding: LangChain Inc (Series A)
+    key_features:
+      - Trace logging and debugging
+      - Prompt management and versioning
+      - Evaluation datasets
+      - A/B testing
+      - Cost tracking
+      - Feedback collection
+    pricing:
+      - tier: Developer
+        price: 0
+        unit: free
+        limits: 5k traces/month
+      - tier: Plus
+        price: 39
+        unit: user/month
+        limits: 10k traces, prompt playground
+      - tier: Enterprise
+        price: null
+        unit: custom
+        limits: Unlimited, SSO, audit logs
+    integrations:
+      - LangChain (native)
+      - OpenAI
+      - Anthropic
+      - Custom endpoints
+    positioning: Enterprise observability for LLM applications
+    target_audience: LangChain users, enterprise AI teams
+    differentiators:
+      - Native LangChain integration
+      - Built-in evaluation framework
+      - Cost tracking by model/chain
+      - Prompt versioning and collaboration
+
+  - name: Pinecone
+    category: vector-db
+    website: https://pinecone.io
+    pricing_url: https://pinecone.io/pricing
+    docs_url: https://docs.pinecone.io
+    description: Managed vector database for AI applications with auto-scaling
+    founded: "2019"
+    funding: $138M Series B
+    key_features:
+      - Fully managed service
+      - Real-time indexing
+      - Metadata filtering
+      - Hybrid search
+      - Namespace isolation
+      - Auto-scaling pods
+    pricing:
+      - tier: Starter
+        price: 0
+        unit: free
+        limits: 100k vectors, 1 pod, community support
+      - tier: Standard
+        price: 70
+        unit: month
+        limits: 2M vectors, 1 pod, email support
+      - tier: Enterprise
+        price: null
+        unit: custom
+        limits: Custom pods, VPC, dedicated support
+    integrations:
+      - OpenAI
+      - Cohere
+      - Hugging Face
+      - LangChain
+      - LlamaIndex
+    positioning: Enterprise-grade managed vector database
+    target_audience: Enterprise AI teams, production applications
+    differentiators:
+      - Fully managed (no ops overhead)
+      - Auto-scaling infrastructure
+      - Enterprise security features
+      - Hybrid search capabilities
+
+  - name: Chroma
+    category: vector-db
+    website: https://trychroma.com
+    pricing_url: https://trychroma.com/pricing
+    docs_url: https://docs.trychroma.com
+    description: Open-source embedding database with local-first design
+    founded: "2022"
+    funding: $18M Seed
+    key_features:
+      - Local-first architecture
+      - Simple Python/JS API
+      - Multi-modal support
+      - Self-hosted or cloud
+      - Docker deployment
+      - Apache 2.0 license
+    pricing:
+      - tier: Open Source
+        price: 0
+        unit: free
+        limits: Self-hosted, unlimited, Apache 2.0
+      - tier: Cloud
+        price: null
+        unit: waitlist
+        limits: Managed service (beta)
+    integrations:
+      - LangChain
+      - LlamaIndex
+      - OpenAI
+      - Hugging Face
+      - Sentence Transformers
+    positioning: Open-source vector database for developers
+    target_audience: Developers, startups, open-source projects
+    differentiators:
+      - Open source (Apache 2.0)
+      - Local-first design
+      - Extremely simple API
+      - Multi-modal embeddings
+
+  - name: Weaviate
+    category: vector-db
+    website: https://weaviate.io
+    pricing_url: https://weaviate.io/pricing
+    docs_url: https://weaviate.io/developers
+    description: Vector search engine with GraphQL interface and modular AI
+    founded: "2019"
+    funding: $50M Series B
+    key_features:
+      - GraphQL query interface
+      - Modular AI integrations
+      - Vector + BM25 hybrid search
+      - Built-in vectorization modules
+      - Real-time indexing
+      - Bring-your-own vectors
+    pricing:
+      - tier: Sandbox
+        price: 0
+        unit: free
+        limits: 14-day trial, 1M objects
+      - tier: Standard
+        price: 25
+        unit: month
+        limits: Hosted, SLA 99.9%
+      - tier: Enterprise
+        price: null
+        unit: custom
+        limits: Custom deployment, dedicated cluster
+    integrations:
+      - OpenAI
+      - Cohere
+      - Hugging Face
+      - LangChain
+      - LlamaIndex
+    positioning: Developer-friendly vector search with GraphQL
+    target_audience: Developers, data engineering teams
+    differentiators:
+      - GraphQL native interface
+      - Modular AI integrations
+      - Vector + BM25 hybrid search
+      - Built-in vectorization options
+
+  - name: AutoGen
+    category: agent-framework
+    website: https://microsoft.github.io/autogen
+    pricing_url: https://microsoft.github.io/autogen
+    docs_url: https://microsoft.github.io/autogen/docs
+    description: Multi-agent conversation framework by Microsoft Research
+    founded: "2023"
+    funding: Microsoft Research
+    key_features:
+      - Conversable agents
+      - Multi-agent group chat
+      - Code generation and execution
+      - Human-in-the-loop
+      - Custom agent types
+      - Local and Docker execution
+    pricing:
+      - tier: Open Source
+        price: 0
+        unit: free
+        limits: Apache 2.0, full framework
+      - tier: AutoGen Studio
+        price: 0
+        unit: preview
+        limits: Visual IDE for agents
+    integrations:
+      - OpenAI
+      - Azure OpenAI
+      - Local LLMs
+      - Docker
+      - Various tools via plugins
+    positioning: Microsoft-backed multi-agent framework
+    target_audience: Researchers, enterprise developers
+    differentiators:
+      - Code execution capabilities
+      - Microsoft backing and resources
+      - Multi-agent conversation patterns
+      - Human-in-the-loop support
+
+  - name: CrewAI
+    category: agent-framework
+    website: https://crewai.com
+    pricing_url: https://crewai.com/pricing
+    docs_url: https://docs.crewai.com
+    description: Framework for orchestrating role-playing AI agents
+    founded: "2023"
+    funding: Independent
+    key_features:
+      - Role-based agent definition
+      - Process workflows
+      - Task delegation
+      - Sequential and hierarchical processes
+      - LangChain compatibility
+      - Crew-based collaboration
+    pricing:
+      - tier: Open Source
+        price: 0
+        unit: free
+        limits: MIT license, self-hosted
+      - tier: Enterprise
+        price: null
+        unit: custom
+        limits: Enterprise support, training
+    integrations:
+      - LangChain
+      - OpenAI
+      - Various LLM providers
+      - Custom tools
+    positioning: Role-based agent orchestration framework
+    target_audience: Agent builders, workflow automation
+    differentiators:
+      - Role-based agent metaphor
+      - Process orchestration
+      - Crew collaboration model
+      - Simple, intuitive API
+
+# Market overview
+categories:
+  memory:
+    description: Long-term memory and context management for AI agents
+    key_players: [Mem0]
+    market_stage: Emerging
+  observability:
+    description: Monitoring, tracing, and evaluation for LLM applications
+    key_players: [LangSmith, Weights & Biases, Arize]
+    market_stage: Growing
+  vector-db:
+    description: Vector databases for embeddings and semantic search
+    key_players: [Pinecone, Chroma, Weaviate, Milvus, Qdrant]
+    market_stage: Mature
+  agent-framework:
+    description: Frameworks for building and orchestrating AI agents
+    key_players: [AutoGen, CrewAI, LangGraph, LlamaIndex]
+    market_stage: Rapid growth
